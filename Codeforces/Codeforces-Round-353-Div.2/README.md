@@ -1,10 +1,12 @@
 675A - Infinite Sequence
+
 Firstly, in case c = 0 we should output YES if a = b else answer is NO.
 If b belongs to sequence b = a + k * c where k is non-negative integer.
 So answer is YES if (b - a) / c is non-negative integer else answer is NO.
 
 
 675B - Restoring Painting
+
 x a y
 b m c
 z d w
@@ -16,6 +18,7 @@ Also we can solve this problem in O(1).
 
 
 675C - Money Transfers
+
 We have array ai and should make all numbers in it be equal to zero with minimal number of operations. Sum of all ai equals to zero.
 We can divide array into parts of consecutive elements with zero sum. If part has length l we can use all pairs of neighbours in operations and make all numbers be equal to zero with l - 1 operations.
 So, if we sum number of operations in each part we get ans = n - k where k is number of parts. We should maximize k to get the optimal answer.
@@ -26,6 +29,7 @@ Bonus: how to hack solutions with overflow?
 
 
 675D - Tree Construction
+
 We have binary search tree (BST) and should insert number in it with good time complexity.
 Let we should add number x. Find numbers l < x < r which were added earlier, l is maximal possible, r is minimal possible (all will be similar if only one of this numbers exists). We can find them for example with std::set and upper_bound in C++.
 We should keep sorted tree traversal (it's property of BST). So x must be right child of vertex with l or left child of vertex with r.
@@ -34,6 +38,7 @@ That's all. Time complexity is .
 
 
 675E - Trains and Statistic
+
 Let the indexation will be from zero. So we should subtract one from all ai. Also let an - 1 = n - 1.
 dpi is sum of shortests pathes from i to i + 1... n - 1.
 dpn - 1 = 0
